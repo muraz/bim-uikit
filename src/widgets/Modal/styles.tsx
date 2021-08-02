@@ -6,6 +6,7 @@ import { ArrowBackIcon, CloseIcon } from "../../components/Svg";
 import { IconButton } from "../../components/Button";
 import { ModalProps } from "./types";
 
+
 export const ModalHeader = styled.div<{ background?: string }>`
   align-items: center;
   background: ${({ background }) => background || "transparent"};

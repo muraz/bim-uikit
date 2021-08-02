@@ -39,6 +39,13 @@ const BodyWrapper = styled.div`
   display: flex;
 `;
 
+const MenuNav = styled.div`
+   padding: 5px 10px;
+   margin-right: 10px;
+   color: #fab016;
+`;
+
+
 const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   flex-grow: 1;
   margin-top: ${({ showMenu }) => (showMenu ? `${MENU_HEIGHT}px` : 0)};
@@ -46,10 +53,10 @@ const Inner = styled.div<{ isPushed: boolean; showMenu: boolean }>`
   transform: translate3d(0, 0, 0);
   max-width: 100%;
 
-  ${({ theme }) => theme.mediaQueries.nav} {
-    margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
-    max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
-  }
+  // ${({ theme }) => theme.mediaQueries.nav} {
+  //   margin-left: ${({ isPushed }) => `${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px`};
+  //   max-width: ${({ isPushed }) => `calc(100% - ${isPushed ? SIDEBAR_WIDTH_FULL : SIDEBAR_WIDTH_REDUCED}px)`};
+  // }
 `;
 
 const MobileOnlyOverlay = styled(Overlay)`
@@ -124,6 +131,8 @@ const Menu: React.FC<NavProps> = ({
         />
         {!!login && !!logout && (
           <Flex>
+            <MenuNav><text>Swap</text></MenuNav>
+            <MenuNav><text>Farms</text></MenuNav>
             <UserBlock account={account} login={login} logout={logout} />
             {profile && <Avatar profile={profile} />}
           </Flex>

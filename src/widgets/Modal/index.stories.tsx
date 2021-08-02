@@ -14,7 +14,8 @@ export default {
 const CustomModal: React.FC<ModalProps> = ({ title, onDismiss, ...props }) => (
   <Modal title={title} onDismiss={onDismiss} {...props}>
     <Heading>{title}</Heading>
-    <Button>This button Does nothing</Button>
+    <div></div>
+    <Button>Submit</Button>
   </Modal>
 );
 
