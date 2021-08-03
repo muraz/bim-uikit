@@ -23,7 +23,7 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
         window.localStorage.setItem(connectorLocalStorageKey, walletConfig.connectorId);
         onDismiss();
       }}
-      style={{ justifyContent: "space-between" }}
+      style={{ justifyContent: "space-between", backgroundColor: "#fcf4e1" }}
       mb={mb}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >

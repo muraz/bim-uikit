@@ -18,6 +18,7 @@ const HelpLink = styled(Link)`
   align-self: center;
   align-items: center;
   margin-top: 24px;
+  color: #fab016;
 `;
 
 const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
@@ -32,7 +33,7 @@ const ConnectModal: React.FC<Props> = ({ login, onDismiss = () => null }) => (
       />
     ))}
     <HelpLink href="https://docs.pancakeswap.finance/get-started/connection-guide" external>
-      <HelpIcon color="primary" mr="6px" />
+      <HelpIcon color="#fab016" mr="6px" />
       Learn how to connect
     </HelpLink>
   </Modal>
